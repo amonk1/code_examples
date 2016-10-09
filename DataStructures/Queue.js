@@ -28,3 +28,11 @@ Queue.prototype.dequeue = function(){
 
 	return deletedData;
 }
+//Method to peek at next value in queue
+Queue.prototype.peek = function(){
+	//Control for empty queue
+	if(this.oldestIndex === this.newestIndex)
+		throw new Error('The queue is empty.')
+
+	return this.data;
+}
