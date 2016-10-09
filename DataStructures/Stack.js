@@ -32,3 +32,11 @@ Stack.prototype.pop = function(){
 
 	return temp;
 }
+//Method to peek at the top value without removing it
+Stack.prototype.peek = function () {
+	//Control for empty stack
+	if(!this.top)
+		throw new Error('There are no items in the stack.');
+
+	return this.top;
+}
