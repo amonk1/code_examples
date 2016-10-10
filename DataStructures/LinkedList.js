@@ -120,10 +120,13 @@ LinkedList.prototype.reverse = function(){
 		return;
 
 	function reverse(current){
-		if(!current.next)
+		if(!current.next) //Last node will stop here
 			return current;
 
 		var head = reverse(current.next);
+		//Last node will point to second to last node
+		//Sever old pointer
+		//Return and then the other nodes iterate through the call stack
 		var nextnode = current.next;
 		nextnode.next = current;
 		current.next = null;
