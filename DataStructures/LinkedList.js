@@ -114,7 +114,24 @@ LinkedList.prototype.remove = function(position){
 
 	return deletedNode;
 }
+//Method to recursively reverse a Linked List
+LinkedList.prototype.reverse = function(){
+	if(!this.head)
+		return;
 
+	function reverse(current){
+		if(!current.next)
+			return current;
+
+		var head = reverse(current.next);
+		var nextnode = current.next;
+		nextnode.next = current;
+		current.next = null;
+		return head;
+	}
+
+	this.head = reverse(this.head);
+}
 
 
 
