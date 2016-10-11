@@ -104,7 +104,7 @@ LinkedList.prototype.remove = function(position){
 	//Case 3: Other node is removed
 	while(count < position){
 		precedingNode = currentNode;
-		nodeToDelete = currentNode.net;
+		nodeToDelete = currentNode.next;
 		count++;
 	}
 
